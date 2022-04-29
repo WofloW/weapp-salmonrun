@@ -1,0 +1,32 @@
+.rotation {
+  text-align: center;
+  padding: 10px 0 50px;
+  max-width: 500px;
+  margin: auto;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.card {
+  color: white;
+  margin-bottom: 30px;
+  background: #fe6700;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.golden {
+  color: gold;
+}
+
+.sr-picker {
+  border: 1px solid gold;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
