@@ -59,7 +59,8 @@ export default function Rotations() {
     }
     return false
   })
-  if (weaponIndex !== 0) {
+
+  if (weaponIndex != 0) {
     const weapon = weaponOptions[weaponIndex].value
     mapFiltered = filter(mapFiltered, (rotation) => {
       const isContainWeapon = includes(concat(rotation.WeaponSets, rotation.RareWeaponID), parseInt(weapon))
@@ -82,21 +83,27 @@ export default function Rotations() {
       <View style={{ margin: '10px 15px' }}>
         <View style={{ fontSize: 12, marginBottom: 10, textAlign: 'center' }}>夜风制作 打工qq群: 138151784</View>
         <View style={{ fontWeight: 400 }}>
-          <View style={{ userSelect: 'none' }}>
-            <View>
-              <View className='at-row' style={{marginBottom: 10}}>
-                破坝<Switch type='checkbox' checked={map0} onChange={() => { setMap0(!map0) }} />&nbsp;
-                破船<Switch type='checkbox' checked={map1} onChange={() => { setMap1(!map1) }}/>&nbsp;
-                破屋<Switch type='checkbox' checked={map2} onChange={() => { setMap2(!map2) }}/>&nbsp;
-              </View>
-              <View className='at-row' style={{marginBottom: 10}}>
-                臭水沟<Switch type='checkbox' checked={map3} onChange={() => { setMap3(!map3) }}/>&nbsp;
-                破楼<Switch type='checkbox' checked={map4} onChange={() => { setMap4(!map4) }}/>
-              </View>
+          <View className='at-row' style={{ marginBottom: 10 }}>
+            <View className='at-col-4'>
+              <Switch type='checkbox' checked={map0} onChange={() => { setMap0(!map0) }} />破坝
+            </View>
+            <View className='at-col-4'>
+              <Switch type='checkbox' checked={map1} onChange={() => { setMap1(!map1) }} />破船
+            </View>
+            <View className='at-col-4'>
+              <Switch type='checkbox' checked={map2} onChange={() => { setMap2(!map2) }} />破屋
+            </View>
+          </View>
+          <View className='at-row' style={{ marginBottom: 10 }}>
+            <View className='at-col-4'>
+              <Switch type='checkbox' checked={map3} onChange={() => { setMap3(!map3) }} />臭水沟
+            </View>
+            <View className='at-col-4'>
+              <Switch type='checkbox' checked={map4} onChange={() => { setMap4(!map4) }} />破楼
             </View>
           </View>
           <View>
-            <Picker mode='selector' range={map(weaponOptions, w => w.label)} onChange={(e)=>{setWeapon(e.detail.value)}}>
+            <Picker mode='selector' range={map(weaponOptions, w => w.label)} onChange={(e) => { setWeapon(e.detail.value) }}>
               <View className='sr-picker'>武器选择：{weaponOptions[weaponIndex].label}</View>
             </Picker>
           </View>
